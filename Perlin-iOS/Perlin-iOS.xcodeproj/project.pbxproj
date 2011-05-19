@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		831E07DC1382FBB9005A30A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831E07DB1382FBB9005A30A5 /* UIKit.framework */; };
+		831E07DE1382FBB9005A30A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831E07DD1382FBB9005A30A5 /* Foundation.framework */; };
+		831E07E01382FBB9005A30A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831E07DF1382FBB9005A30A5 /* CoreGraphics.framework */; };
+		831E07E91382FBB9005A30A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E07E81382FBB9005A30A5 /* main.m */; };
+		831E08001382FBB9005A30A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831E07DB1382FBB9005A30A5 /* UIKit.framework */; };
+		831E08011382FBB9005A30A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831E07DD1382FBB9005A30A5 /* Foundation.framework */; };
+		831E08021382FBB9005A30A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831E07DF1382FBB9005A30A5 /* CoreGraphics.framework */; };
+		831E080A1382FBB9005A30A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 831E08081382FBB9005A30A5 /* InfoPlist.strings */; };
+		831E08291382FC45005A30A5 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E081B1382FC45005A30A5 /* FlipsideViewController.m */; };
+		831E082A1382FC45005A30A5 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E081D1382FC45005A30A5 /* MainViewController.m */; };
+		831E082B1382FC45005A30A5 /* Perlin_iOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E081F1382FC45005A30A5 /* Perlin_iOSAppDelegate.m */; };
+		831E082C1382FC45005A30A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 831E08241382FC45005A30A5 /* InfoPlist.strings */; };
+		831E082D1382FC45005A30A5 /* FlipsideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831E08261382FC45005A30A5 /* FlipsideView.xib */; };
+		831E082E1382FC45005A30A5 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831E08271382FC45005A30A5 /* MainView.xib */; };
+		831E082F1382FC45005A30A5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831E08281382FC45005A30A5 /* MainWindow.xib */; };
+		831E08321382FCFA005A30A5 /* CZGPerlinGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E08311382FCFA005A30A5 /* CZGPerlinGenerator.m */; };
+		831E08331382FCFA005A30A5 /* CZGPerlinGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E08311382FCFA005A30A5 /* CZGPerlinGenerator.m */; };
+		831E08381383017C005A30A5 /* CZGPerlinGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E08371383017C005A30A5 /* CZGPerlinGeneratorTests.m */; };
+		83B2BE4B13834DCC00B122E0 /* UIImage+CZGPerlin.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B2BE4A13834DCC00B122E0 /* UIImage+CZGPerlin.m */; };
+		83B2BE4C13834DCC00B122E0 /* UIImage+CZGPerlin.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B2BE4A13834DCC00B122E0 /* UIImage+CZGPerlin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		831E07D71382FBB8005A30A5 /* Perlin-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Perlin-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		831E07DB1382FBB9005A30A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		831E07DD1382FBB9005A30A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		831E07DF1382FBB9005A30A5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		831E07E31382FBB9005A30A5 /* Perlin-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Perlin-iOS-Info.plist"; sourceTree = "<group>"; };
+		831E07E71382FBB9005A30A5 /* Perlin-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Perlin-iOS-Prefix.pch"; sourceTree = "<group>"; };
+		831E07E81382FBB9005A30A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		831E07FF1382FBB9005A30A5 /* Perlin-iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Perlin-iOSTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		831E08071382FBB9005A30A5 /* Perlin-iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Perlin-iOSTests-Info.plist"; sourceTree = "<group>"; };
+		831E08091382FBB9005A30A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		831E080B1382FBB9005A30A5 /* Perlin-iOSTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Perlin-iOSTests-Prefix.pch"; sourceTree = "<group>"; };
+		831E081A1382FC45005A30A5 /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		831E081B1382FC45005A30A5 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		831E081C1382FC45005A30A5 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		831E081D1382FC45005A30A5 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		831E081E1382FC45005A30A5 /* Perlin_iOSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Perlin_iOSAppDelegate.h; sourceTree = "<group>"; };
+		831E081F1382FC45005A30A5 /* Perlin_iOSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Perlin_iOSAppDelegate.m; sourceTree = "<group>"; };
+		831E08241382FC45005A30A5 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		831E08261382FC45005A30A5 /* FlipsideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlipsideView.xib; sourceTree = "<group>"; };
+		831E08271382FC45005A30A5 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		831E08281382FC45005A30A5 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		831E08301382FCFA005A30A5 /* CZGPerlinGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZGPerlinGenerator.h; sourceTree = "<group>"; };
+		831E08311382FCFA005A30A5 /* CZGPerlinGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZGPerlinGenerator.m; sourceTree = "<group>"; };
+		831E08361383017C005A30A5 /* CZGPerlinGeneratorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZGPerlinGeneratorTests.h; sourceTree = "<group>"; };
+		831E08371383017C005A30A5 /* CZGPerlinGeneratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZGPerlinGeneratorTests.m; sourceTree = "<group>"; };
+		83B2BE4913834DCC00B122E0 /* UIImage+CZGPerlin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+CZGPerlin.h"; path = "Graphics/UIImage+CZGPerlin.h"; sourceTree = "<group>"; };
+		83B2BE4A13834DCC00B122E0 /* UIImage+CZGPerlin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CZGPerlin.m"; path = "Graphics/UIImage+CZGPerlin.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		831E07D41382FBB8005A30A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831E07DC1382FBB9005A30A5 /* UIKit.framework in Frameworks */,
+				831E07DE1382FBB9005A30A5 /* Foundation.framework in Frameworks */,
+				831E07E01382FBB9005A30A5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		831E07FB1382FBB9005A30A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831E08001382FBB9005A30A5 /* UIKit.framework in Frameworks */,
+				831E08011382FBB9005A30A5 /* Foundation.framework in Frameworks */,
+				831E08021382FBB9005A30A5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		831E07CC1382FBB8005A30A5 = {
+			isa = PBXGroup;
+			children = (
+				831E07E11382FBB9005A30A5 /* Perlin-iOS */,
+				831E08051382FBB9005A30A5 /* Perlin-iOSTests */,
+				831E07DA1382FBB9005A30A5 /* Frameworks */,
+				831E07D81382FBB8005A30A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		831E07D81382FBB8005A30A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				831E07D71382FBB8005A30A5 /* Perlin-iOS.app */,
+				831E07FF1382FBB9005A30A5 /* Perlin-iOSTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		831E07DA1382FBB9005A30A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				831E07DB1382FBB9005A30A5 /* UIKit.framework */,
+				831E07DD1382FBB9005A30A5 /* Foundation.framework */,
+				831E07DF1382FBB9005A30A5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		831E07E11382FBB9005A30A5 /* Perlin-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				831E08181382FC45005A30A5 /* Classes */,
+				831E08231382FC45005A30A5 /* Resources */,
+				831E07E21382FBB9005A30A5 /* Supporting Files */,
+			);
+			path = "Perlin-iOS";
+			sourceTree = "<group>";
+		};
+		831E07E21382FBB9005A30A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				831E07E31382FBB9005A30A5 /* Perlin-iOS-Info.plist */,
+				831E07E71382FBB9005A30A5 /* Perlin-iOS-Prefix.pch */,
+				831E07E81382FBB9005A30A5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		831E08051382FBB9005A30A5 /* Perlin-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				831E083413830160005A30A5 /* Classes */,
+				831E08061382FBB9005A30A5 /* Supporting Files */,
+			);
+			path = "Perlin-iOSTests";
+			sourceTree = "<group>";
+		};
+		831E08061382FBB9005A30A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				831E08071382FBB9005A30A5 /* Perlin-iOSTests-Info.plist */,
+				831E08081382FBB9005A30A5 /* InfoPlist.strings */,
+				831E080B1382FBB9005A30A5 /* Perlin-iOSTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		831E08181382FC45005A30A5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				83B2BE4813834D9B00B122E0 /* Graphics */,
+				831E08191382FC45005A30A5 /* Controllers */,
+				831E08201382FC45005A30A5 /* Helpers */,
+				831E08211382FC45005A30A5 /* Model */,
+				831E08221382FC45005A30A5 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		831E08191382FC45005A30A5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				831E081A1382FC45005A30A5 /* FlipsideViewController.h */,
+				831E081B1382FC45005A30A5 /* FlipsideViewController.m */,
+				831E081C1382FC45005A30A5 /* MainViewController.h */,
+				831E081D1382FC45005A30A5 /* MainViewController.m */,
+				831E081E1382FC45005A30A5 /* Perlin_iOSAppDelegate.h */,
+				831E081F1382FC45005A30A5 /* Perlin_iOSAppDelegate.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		831E08201382FC45005A30A5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		831E08211382FC45005A30A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				831E08301382FCFA005A30A5 /* CZGPerlinGenerator.h */,
+				831E08311382FCFA005A30A5 /* CZGPerlinGenerator.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		831E08221382FC45005A30A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		831E08231382FC45005A30A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				831E08241382FC45005A30A5 /* InfoPlist.strings */,
+				831E08251382FC45005A30A5 /* xibs */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		831E08251382FC45005A30A5 /* xibs */ = {
+			isa = PBXGroup;
+			children = (
+				831E08261382FC45005A30A5 /* FlipsideView.xib */,
+				831E08271382FC45005A30A5 /* MainView.xib */,
+				831E08281382FC45005A30A5 /* MainWindow.xib */,
+			);
+			path = xibs;
+			sourceTree = "<group>";
+		};
+		831E083413830160005A30A5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				831E083513830160005A30A5 /* Model */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		831E083513830160005A30A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				831E08361383017C005A30A5 /* CZGPerlinGeneratorTests.h */,
+				831E08371383017C005A30A5 /* CZGPerlinGeneratorTests.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83B2BE4813834D9B00B122E0 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				83B2BE4913834DCC00B122E0 /* UIImage+CZGPerlin.h */,
+				83B2BE4A13834DCC00B122E0 /* UIImage+CZGPerlin.m */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		831E07D61382FBB8005A30A5 /* Perlin-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 831E08121382FBB9005A30A5 /* Build configuration list for PBXNativeTarget "Perlin-iOS" */;
+			buildPhases = (
+				831E07D31382FBB8005A30A5 /* Sources */,
+				831E07D41382FBB8005A30A5 /* Frameworks */,
+				831E07D51382FBB8005A30A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Perlin-iOS";
+			productName = "Perlin-iOS";
+			productReference = 831E07D71382FBB8005A30A5 /* Perlin-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		831E07FE1382FBB9005A30A5 /* Perlin-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 831E08151382FBB9005A30A5 /* Build configuration list for PBXNativeTarget "Perlin-iOSTests" */;
+			buildPhases = (
+				831E07FA1382FBB9005A30A5 /* Sources */,
+				831E07FB1382FBB9005A30A5 /* Frameworks */,
+				831E07FC1382FBB9005A30A5 /* Resources */,
+				831E07FD1382FBB9005A30A5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Perlin-iOSTests";
+			productName = "Perlin-iOSTests";
+			productReference = 831E07FF1382FBB9005A30A5 /* Perlin-iOSTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		831E07CE1382FBB8005A30A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "ZWorkbench, Inc.";
+			};
+			buildConfigurationList = 831E07D11382FBB8005A30A5 /* Build configuration list for PBXProject "Perlin-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 831E07CC1382FBB8005A30A5;
+			productRefGroup = 831E07D81382FBB8005A30A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				831E07D61382FBB8005A30A5 /* Perlin-iOS */,
+				831E07FE1382FBB9005A30A5 /* Perlin-iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		831E07D51382FBB8005A30A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831E082C1382FC45005A30A5 /* InfoPlist.strings in Resources */,
+				831E082D1382FC45005A30A5 /* FlipsideView.xib in Resources */,
+				831E082E1382FC45005A30A5 /* MainView.xib in Resources */,
+				831E082F1382FC45005A30A5 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		831E07FC1382FBB9005A30A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831E080A1382FBB9005A30A5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		831E07FD1382FBB9005A30A5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		831E07D31382FBB8005A30A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831E07E91382FBB9005A30A5 /* main.m in Sources */,
+				831E08291382FC45005A30A5 /* FlipsideViewController.m in Sources */,
+				831E082A1382FC45005A30A5 /* MainViewController.m in Sources */,
+				831E082B1382FC45005A30A5 /* Perlin_iOSAppDelegate.m in Sources */,
+				831E08321382FCFA005A30A5 /* CZGPerlinGenerator.m in Sources */,
+				83B2BE4B13834DCC00B122E0 /* UIImage+CZGPerlin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		831E07FA1382FBB9005A30A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831E08331382FCFA005A30A5 /* CZGPerlinGenerator.m in Sources */,
+				831E08381383017C005A30A5 /* CZGPerlinGeneratorTests.m in Sources */,
+				83B2BE4C13834DCC00B122E0 /* UIImage+CZGPerlin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		831E08081382FBB9005A30A5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				831E08091382FBB9005A30A5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		831E08101382FBB9005A30A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		831E08111382FBB9005A30A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		831E08131382FBB9005A30A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Perlin-iOS/Perlin-iOS-Prefix.pch";
+				INFOPLIST_FILE = "Perlin-iOS/Perlin-iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		831E08141382FBB9005A30A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Perlin-iOS/Perlin-iOS-Prefix.pch";
+				INFOPLIST_FILE = "Perlin-iOS/Perlin-iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		831E08161382FBB9005A30A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Perlin-iOSTests/Perlin-iOSTests-Prefix.pch";
+				INFOPLIST_FILE = "Perlin-iOSTests/Perlin-iOSTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		831E08171382FBB9005A30A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Perlin-iOSTests/Perlin-iOSTests-Prefix.pch";
+				INFOPLIST_FILE = "Perlin-iOSTests/Perlin-iOSTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		831E07D11382FBB8005A30A5 /* Build configuration list for PBXProject "Perlin-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				831E08101382FBB9005A30A5 /* Debug */,
+				831E08111382FBB9005A30A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		831E08121382FBB9005A30A5 /* Build configuration list for PBXNativeTarget "Perlin-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				831E08131382FBB9005A30A5 /* Debug */,
+				831E08141382FBB9005A30A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		831E08151382FBB9005A30A5 /* Build configuration list for PBXNativeTarget "Perlin-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				831E08161382FBB9005A30A5 /* Debug */,
+				831E08171382FBB9005A30A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 831E07CE1382FBB8005A30A5 /* Project object */;
+}

@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Perlin-iOSTests' target in the 'Perlin-iOSTests' project
+//
+
+#ifdef __OBJC__
+   #import <UIKit/UIKit.h>
+#endif

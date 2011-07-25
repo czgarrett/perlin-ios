@@ -1,12 +1,13 @@
 
 This project contains the following:
 
-- A Perlin noise generator written in Objective-C, suitable for iOS and (probably) Mac.
+- A Perlin noise generator written in Objective-C, suitable for iOS and Mac.
 
-- An XCode project with an iOS app for playing with Perlin noise functions.
+- An XCode project with iOS and Mac apps for playing with Perlin noise functions.
 
-- Some UIImage category methods to get you started with generating Perlin-based images.
+- Some UIImage/NSImage category methods to get you started with generating Perlin-based images.
 
+Thanks to Rob Keniger for contributing the Mac version.
 
 MIT License:
 

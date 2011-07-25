@@ -12,13 +12,16 @@
 
 typedef enum {
 	ColorSchemeClouds = 0,
-	ColorSchemePaper
+	ColorSchemePaper,
+	ColorSchemeCustom
 } ColorScheme;
 
 @interface Perlin_MacAppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate> {
 	NSWindow *window;
 	NSImageView *imageView;
 	NSTextField *timeLabel;
+	NSColor* color1;
+	NSColor* color2;
 }
 
 @property (retain) CZGPerlinGenerator *perlinGenerator;
@@ -28,6 +31,9 @@ typedef enum {
 @property (assign) IBOutlet NSTextField *timeLabel;
 
 @property ColorScheme colorScheme;
+@property (retain) NSColor* color1;
+@property (retain) NSColor* color2;
+@property (readonly) BOOL customColorInUse;
 
 - (void)generateImage;
 

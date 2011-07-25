@@ -19,6 +19,8 @@ static NSString* PerlinCtx = @"PerlinCtx";
 @synthesize timeLabel;
 @synthesize perlinGenerator;
 @synthesize colorScheme;
+@synthesize color1;
+@synthesize color2;
 
 - (id)init 
 {
@@ -26,6 +28,8 @@ static NSString* PerlinCtx = @"PerlinCtx";
     if (self) 
 	{
         perlinGenerator = [[CZGPerlinGenerator alloc] init];
+		color1 = [[NSColor blackColor] retain];
+		color2 = [[NSColor whiteColor] retain];
     }
     return self;
 }
@@ -43,6 +47,8 @@ static NSString* PerlinCtx = @"PerlinCtx";
 	[perlinGenerator addObserver:self forKeyPath:@"octaves" options:NSKeyValueObservingOptionNew context:PerlinCtx];
 	[perlinGenerator addObserver:self forKeyPath:@"zoom" options:NSKeyValueObservingOptionNew context:PerlinCtx];
 	[perlinGenerator addObserver:self forKeyPath:@"persistence" options:NSKeyValueObservingOptionNew context:PerlinCtx];
+	[self addObserver:self forKeyPath:@"color1" options:NSKeyValueObservingOptionNew context:PerlinCtx];
+	[self addObserver:self forKeyPath:@"color2" options:NSKeyValueObservingOptionNew context:PerlinCtx];
 	[self addObserver:self forKeyPath:@"colorScheme" options:NSKeyValueObservingOptionNew context:PerlinCtx];
 }
 
@@ -60,6 +66,11 @@ static NSString* PerlinCtx = @"PerlinCtx";
 - (void)dealloc
 {
 	[perlinGenerator release];
+	perlinGenerator = nil;
+	[color1 release];
+	color1 = nil;
+	[color2 release];
+	color2 = nil;
 	[super dealloc];
 }
 
@@ -82,6 +93,9 @@ static NSString* PerlinCtx = @"PerlinCtx";
 			case ColorSchemePaper:
 				image = [NSImage paperWithPerlinGenerator:self.perlinGenerator size:imageSize];
 				break;
+			case ColorSchemeCustom:
+				image = [NSImage noiseWithPerlinGenerator:self.perlinGenerator size:imageSize firstColor:self.color1 secondColor:self.color2];
+				break;
 			case ColorSchemeClouds:
 			default:
 				image = [NSImage skyWithPerlinGenerator:self.perlinGenerator size:imageSize];
@@ -97,8 +111,19 @@ static NSString* PerlinCtx = @"PerlinCtx";
 	});
 	
 }
-	 
-	 
+
+
+//set up a dependent boolean property that we can use to control the visibility of the custom color wells
++ (NSSet*)keyPathsForValuesAffectingCustomColorInUse
+{
+	return [NSSet setWithObject:@"colorScheme"];
+}
+
+- (BOOL)customColorInUse
+{
+	return (self.colorScheme == ColorSchemeCustom);
+}
+
 	 
 //this makes the app to create a new version of the image when the window is resized
 - (void)windowDidEndLiveResize:(NSNotification *)notification

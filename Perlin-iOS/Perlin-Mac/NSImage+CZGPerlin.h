@@ -17,5 +17,6 @@
 
 + (NSImage*)skyWithPerlinGenerator:(CZGPerlinGenerator*)generator size:(NSSize)size;
 + (NSImage*)paperWithPerlinGenerator:(CZGPerlinGenerator*)generator size:(NSSize)size;
++ (NSImage*)noiseWithPerlinGenerator:(CZGPerlinGenerator*)generator size:(NSSize)size firstColor:(NSColor*)color1 secondColor:(NSColor*)color2;
 
 @end

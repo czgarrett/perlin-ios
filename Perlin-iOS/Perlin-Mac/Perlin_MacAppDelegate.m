@@ -65,22 +65,23 @@ static NSString* PerlinCtx = @"PerlinCtx";
 {
 	[self.timeLabel setStringValue:@"Rendering…"];
 	NSSize imageSize = [self.imageView frame].size;
+	/*
+	 The image is rendered in the background so that the UI remains responsive.
+	 the image rendering can be called several times in succession, but this will just make
+	 image updates pile up, they will be rendered eventually.
+	 */
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 		NSLog(@"Begin generating image");
 		NSDate *start = [NSDate date];
 		NSImage *image = nil;
-		NSLog(@"persistence: %f",self.perlinGenerator.persistence);
-
 		switch (self.colorScheme) 
 		{
 			case ColorSchemePaper:
 				image = [NSImage paperWithPerlinGenerator:self.perlinGenerator size:imageSize];
-				NSLog(@"Paper image: %@",image);
 				break;
 			case ColorSchemeClouds:
 			default:
 				image = [NSImage skyWithPerlinGenerator:self.perlinGenerator size:imageSize];
-				NSLog(@"Clouds image: %@",image);
 				break;
 		}
 

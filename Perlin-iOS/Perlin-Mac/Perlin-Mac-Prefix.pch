@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Perlin-Mac' target in the 'Perlin-Mac' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif

@@ -52,4 +52,30 @@
 }
 
 
++ (NSImage*)noiseWithPerlinGenerator:(CZGPerlinGenerator*)generator size:(NSSize)size firstColor:(NSColor*)color1 secondColor:(NSColor*)color2
+{
+	NSImage* perlinImage = [[NSImage alloc] initWithSize:size];
+	[perlinImage lockFocus];
+	CGContextRef ctx = [[NSGraphicsContext currentContext] graphicsPort];
+	
+	CGFloat components1[4], components2[4];
+	[color1 getRed: &components1[0] green: &components1[1] blue: &components1[2] alpha: &components1[3]];
+	[color2 getRed: &components2[0] green: &components2[1] blue: &components2[2] alpha: &components2[3]];
+	
+	CGContextSetRGBFillColor(ctx, components1[0], components1[1], components1[2], components1[3]);
+	CGContextFillRect(ctx, CGRectMake(0.0, 0.0, size.width, size.height));
+	
+	for (CGFloat x = 0.0; x < size.width; x+=1.0) {
+		for (CGFloat y=0.0; y < size.height; y+=1.0) {
+			CGContextSetRGBFillColor(ctx, components2[0], components2[1], components2[2], ABS([generator perlinNoiseX: x y: y z: 0 t: 0]));
+			CGContextFillRect(ctx, CGRectMake(x, y, 1.0, 1.0));
+		}
+	}
+	
+	[perlinImage unlockFocus];
+	return [perlinImage autorelease];
+}
+
+
+
 @end

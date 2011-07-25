@@ -10,7 +10,7 @@
 #import "CZGPerlinGenerator.h"
 #import "NSImage+CZGPerlin.h"
 
-static NSString* PerlinCtx = @"PerlinCtx";
+static NSString* PerlinCtx = @"PerlinCtx"; //used as a KVO observation context
 
 @implementation Perlin_MacAppDelegate
 
@@ -21,6 +21,7 @@ static NSString* PerlinCtx = @"PerlinCtx";
 @synthesize colorScheme;
 @synthesize color1;
 @synthesize color2;
+@synthesize controlsEnabled;
 
 - (id)init 
 {
@@ -30,6 +31,7 @@ static NSString* PerlinCtx = @"PerlinCtx";
         perlinGenerator = [[CZGPerlinGenerator alloc] init];
 		color1 = [[NSColor blackColor] retain];
 		color2 = [[NSColor whiteColor] retain];
+		controlsEnabled = YES;
     }
     return self;
 }
@@ -78,12 +80,8 @@ static NSString* PerlinCtx = @"PerlinCtx";
 {
 	[self.timeLabel setStringValue:@"Rendering…"];
 	NSSize imageSize = [self.imageView frame].size;
-	/*
-	 The image is rendered in the background so that the UI remains responsive.
-	 The image rendering can be called several times in succession if the user changes parameters before the image rendering is complete,
-	 but this will just make image updates pile up, they will be rendered eventually once the user leaves the UI alone.
-	 Improving this (perhaps with NSOperation and some sort of cancellation mechanism) is left as an exercise for the reader!
-	 */
+	self.controlsEnabled = NO;
+	
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 		NSLog(@"Begin generating image");
 		NSDate *start = [NSDate date];
@@ -107,6 +105,7 @@ static NSString* PerlinCtx = @"PerlinCtx";
 			NSLog(@"Generated image");
 			[self.timeLabel setStringValue:[NSString stringWithFormat: @"%f", time]];
 			self.imageView.image = image;
+			self.controlsEnabled = YES;
 		});
 	});
 	

@@ -22,6 +22,7 @@ typedef enum {
 	NSTextField *timeLabel;
 	NSColor* color1;
 	NSColor* color2;
+	BOOL controlsEnabled;
 }
 
 @property (retain) CZGPerlinGenerator *perlinGenerator;
@@ -29,6 +30,8 @@ typedef enum {
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSImageView *imageView;
 @property (assign) IBOutlet NSTextField *timeLabel;
+
+@property BOOL controlsEnabled;
 
 @property ColorScheme colorScheme;
 @property (retain) NSColor* color1;

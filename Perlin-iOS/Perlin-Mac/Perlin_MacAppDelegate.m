@@ -37,11 +37,13 @@ static NSString* PerlinCtx = @"PerlinCtx";
 	perlinGenerator.zoom = 50;
 	perlinGenerator.persistence = 0.5; //0.00001;
 	[self generateImage];
+	
+	//the UI uses Cocoa bindings so we need to observe for changes in the various keys and react when something interesting happens.
+	//we don't need to clean up these observers because this object will not go away until the app quits.
 	[perlinGenerator addObserver:self forKeyPath:@"octaves" options:NSKeyValueObservingOptionNew context:PerlinCtx];
 	[perlinGenerator addObserver:self forKeyPath:@"zoom" options:NSKeyValueObservingOptionNew context:PerlinCtx];
 	[perlinGenerator addObserver:self forKeyPath:@"persistence" options:NSKeyValueObservingOptionNew context:PerlinCtx];
 	[self addObserver:self forKeyPath:@"colorScheme" options:NSKeyValueObservingOptionNew context:PerlinCtx];
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowDidEndLiveResize:) name:NSWindowDidEndLiveResizeNotification object:self.window];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -67,8 +69,9 @@ static NSString* PerlinCtx = @"PerlinCtx";
 	NSSize imageSize = [self.imageView frame].size;
 	/*
 	 The image is rendered in the background so that the UI remains responsive.
-	 the image rendering can be called several times in succession, but this will just make
-	 image updates pile up, they will be rendered eventually.
+	 The image rendering can be called several times in succession if the user changes parameters before the image rendering is complete,
+	 but this will just make image updates pile up, they will be rendered eventually once the user leaves the UI alone.
+	 Improving this (perhaps with NSOperation and some sort of cancellation mechanism) is left as an exercise for the reader!
 	 */
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 		NSLog(@"Begin generating image");
@@ -97,7 +100,7 @@ static NSString* PerlinCtx = @"PerlinCtx";
 	 
 	 
 	 
-
+//this makes the app to create a new version of the image when the window is resized
 - (void)windowDidEndLiveResize:(NSNotification *)notification
 {
 	[self generateImage];

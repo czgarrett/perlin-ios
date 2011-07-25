@@ -59,8 +59,8 @@
 	CGContextRef ctx = [[NSGraphicsContext currentContext] graphicsPort];
 	
 	CGFloat components1[4], components2[4];
-	[color1 getRed: &components1[0] green: &components1[1] blue: &components1[2] alpha: &components1[3]];
-	[color2 getRed: &components2[0] green: &components2[1] blue: &components2[2] alpha: &components2[3]];
+	[[color1 colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]] getRed: &components1[0] green: &components1[1] blue: &components1[2] alpha: &components1[3]];
+	[[color2 colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]] getRed: &components2[0] green: &components2[1] blue: &components2[2] alpha: &components2[3]];
 	
 	CGContextSetRGBFillColor(ctx, components1[0], components1[1], components1[2], components1[3]);
 	CGContextFillRect(ctx, CGRectMake(0.0, 0.0, size.width, size.height));

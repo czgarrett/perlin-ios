@@ -8,6 +8,12 @@
 
 #import <AppKit/AppKit.h>
 
-@interface NSImage_CZGPerlin : NSImage
+
+@class CZGPerlinGenerator;
+
+@interface NSImage (CZGPerlin)
+
++ (NSImage*)skyWithPerlinGenerator:(CZGPerlinGenerator*)generator size:(NSSize)size;
++ (NSImage*)paperWithPerlinGenerator:(CZGPerlinGenerator*)generator size:(NSSize)size;
 
 @end

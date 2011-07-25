@@ -34,6 +34,8 @@
 		D459395F13DCF516000DEF78 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D459395D13DCF516000DEF78 /* MainMenu.xib */; };
 		D459396613DCF58C000DEF78 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D459396513DCF58C000DEF78 /* Cocoa.framework */; };
 		D459396B13DCF680000DEF78 /* NSImage+CZGPerlin.m in Sources */ = {isa = PBXBuildFile; fileRef = D459396A13DCF680000DEF78 /* NSImage+CZGPerlin.m */; };
+		D459396C13DCFFC3000DEF78 /* CZGPerlinGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E08311382FCFA005A30A5 /* CZGPerlinGenerator.m */; };
+		D459396E13DD0180000DEF78 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D459396D13DD0180000DEF78 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,7 @@
 		D459396513DCF58C000DEF78 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		D459396913DCF680000DEF78 /* NSImage+CZGPerlin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+CZGPerlin.h"; sourceTree = "<group>"; };
 		D459396A13DCF680000DEF78 /* NSImage+CZGPerlin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+CZGPerlin.m"; sourceTree = "<group>"; };
+		D459396D13DD0180000DEF78 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D459396E13DD0180000DEF78 /* QuartzCore.framework in Frameworks */,
 				D459396613DCF58C000DEF78 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +138,7 @@
 		831E07DA1382FBB9005A30A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D459396D13DD0180000DEF78 /* QuartzCore.framework */,
 				831E07DB1382FBB9005A30A5 /* UIKit.framework */,
 				831E07DD1382FBB9005A30A5 /* Foundation.framework */,
 				831E07DF1382FBB9005A30A5 /* CoreGraphics.framework */,
@@ -492,6 +497,7 @@
 				D459395513DCF515000DEF78 /* main.m in Sources */,
 				D459395C13DCF515000DEF78 /* Perlin_MacAppDelegate.m in Sources */,
 				D459396B13DCF680000DEF78 /* NSImage+CZGPerlin.m in Sources */,
+				D459396C13DCFFC3000DEF78 /* CZGPerlinGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

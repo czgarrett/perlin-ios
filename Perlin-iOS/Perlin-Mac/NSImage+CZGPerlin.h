@@ -1,10 +1,12 @@
 //
 //  NSImage+CZGPerlin.h
-//  Perlin-iOS
+//  Perlin-Mac
 //
 //  Created by Rob Keniger on 25/07/11.
-//  Copyright 2011 ZWorkbench, Inc. All rights reserved.
+//  Copyright 2011 Big Bang Software Pty Ltd. All rights reserved.
 //
+//  Based on code created by Christopher Garrett
+//  Copyright 2011 ZWorkbench, Inc. All rights reserved.
 
 #import <AppKit/AppKit.h>
 

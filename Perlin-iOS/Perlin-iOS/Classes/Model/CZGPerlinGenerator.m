@@ -41,7 +41,7 @@ static const char gradient[32][4] =
 @synthesize octaves, persistence, zoom;
 
 + (CZGPerlinGenerator *) perlinGenerator {
-   return [[[CZGPerlinGenerator alloc] init] autorelease];
+   return [[CZGPerlinGenerator alloc] init];
 }
 
 - (id) init {
